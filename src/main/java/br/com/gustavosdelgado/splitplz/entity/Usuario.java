@@ -9,6 +9,16 @@ import javax.persistence.OneToOne;
 @Entity
 public class Usuario {
 
+    public Usuario() {
+        // necessario para JPA
+    }
+
+    public Usuario(String email, String name, String surname) {
+        this.email = email;
+        this.name = name;
+        this.surname = surname;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
